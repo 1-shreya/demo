@@ -1,4 +1,4 @@
-//friend function with operator overloading 
+//friend function with operator overloading outside function
 #include<iostream>
 using namespace std;
 //class Inches;//forward declaration
@@ -17,24 +17,16 @@ class complex
 {
 	cout<<"\n"<<real<<","<<comp;
 }
-	
-
-	friend complex operator+(complex &objn,complex &objm);
-};
-
-
-
-
-	complex operator+(complex &objn,complex &objm)
+complex operator+(complex &objm)
 		{
 		 //print total in inches only
 		 //feet--->inches+inches=totAL
 		 complex objt;
-		  objt.real=objn.real+objm.real;
-		  objt.comp=objn.comp+objm.comp;
+		  objt.real=real+objm.real;
+		  objt.comp=comp+objm.comp;
 		  return(objt);
-		  
 		}
+};
 
 int main()
 {
@@ -45,7 +37,7 @@ int main()
 	no2.display();
 	cout<<" \naddition of above numbers is:";
 	no3=no1+no2;
-no3.display();
+	no3.display();
 	
 	
 //	objn;

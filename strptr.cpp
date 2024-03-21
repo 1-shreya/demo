@@ -1,15 +1,11 @@
 #include<iostream>
 using namespace std;
-struct book{
-	int no;
-};
-main()
+
+int main()
 {
-	struct book *b1,b;
-	b1=&b;
-	cout<<"Enter number:";
-//	(*b1).no=5;
-	cin>>(*b1).no;
-	cout<<"\n"<<(*b1).no;
-	
+   string n="abba dabba chabba";
+   string *p;
+   p=&n;
+   cout<<"from pointer:"<<*p;//referce to complete string
+   
 }

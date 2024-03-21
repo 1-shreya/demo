@@ -1,24 +1,34 @@
-// write a profram scan number and calculate factorial using without return type
+//factorial of number and check it factorial of any
 
-#include<iostream>
+
+
+#include<iostream> //header file
 using namespace std;
-void factorial(int x)
+
+int fact(int no)
+	{
+      if (no==1)
+			return 1;
+	 else
+			return no*fact(no-1);
+   }
+
+int main()//start of code
 {
-	int z,fact=1;
-	//for(x;x>=1;x++)
-	while(x>=1)
-	{ 
-	fact=fact*x;
-	x--;
-	//cout<<"\nfactorial of given number is:"<<fact;
-	}
-	cout<<"\nfactorial of given number is:"<<fact;
-	
-}
-main()
-{
-	int a;
-	cout<<"Enter an element"<<endl;
-	cin>>a;
-	factorial(a);
+	int no,n,flag=0;//no
+	cout<<"\nenter number to check:";
+	cin>>no;
+
+
+	for(n=1;fact(n)<=no;n++)
+	{
+	 if (no==fact(n))
+		{
+		cout<<no<<" is factorial of "<<n;
+		flag=1;//yes
+	    }
+    }
+	if(flag==0)
+		cout<<no<<" is not factorial of any";
+	return 0;
 }
